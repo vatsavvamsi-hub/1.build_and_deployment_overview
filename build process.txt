@@ -1,0 +1,33 @@
+A typical build process before code deployment to QA involves several sequential stages:
+
+1. Source Code Preparation
+•  Version Control: Code is pulled from the main/develop branch or feature branches
+•  Dependency Resolution: Package managers (npm, pip, Maven, etc.) download required libraries
+•  Environment Setup: Build tools and runtime environments are configured
+
+2. Code Quality Checks
+•  Linting: Static analysis tools check code style and potential issues
+•  Type Checking: For typed languages, verify type safety (TypeScript, C#, etc.)
+•  Security Scanning: Tools scan for vulnerabilities in code and dependencies
+
+3. Compilation/Transpilation
+•  Build: Source code is compiled into executable format or transpiled (TypeScript→JavaScript)
+•  Asset Processing: Images, CSS, and other assets are optimized and bundled
+•  Code Minification: JavaScript/CSS files are compressed for production
+
+4. Testing
+•  Unit Tests: Individual functions/components are tested
+•  Integration Tests: Interactions between components are verified
+•  Code Coverage: Ensures adequate test coverage thresholds are met
+
+5. Packaging
+•  Artifact Creation: Application is packaged into deployable format (JAR, Docker image, ZIP, etc.)
+•  Versioning: Build artifacts are tagged with version numbers
+•  Documentation: API docs and release notes are generated
+
+6. Pre-Deployment Validation
+•  Smoke Tests: Basic functionality verification
+•  Database Migrations: Schema changes are prepared and validated
+•  Configuration Management: Environment-specific configs are applied
+
+The entire process is typically automated through CI/CD pipelines (Jenkins, GitHub Actions, Azure DevOps) that trigger on code commits and ensure consistent, repeatable builds.
